@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ken & Clare - Wedding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --green: #355e3b;
+      --light: #f5f3ec;
+      --accent: #c9a66b;
+      --dark: #1f2a24;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                  url("https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 6rem 1.5rem 5rem;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    header h2 {
+      margin-top: 0.75rem;
+      font-size: 1.4rem;
+      font-weight: normal;
+      letter-spacing: 0.12em;
+    }
+    header p {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+    }
+    .date-badge {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.4rem;
+      border: 1px solid #fff;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav li {
+      margin: 0.4rem 0.8rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+      border-color: var(--accent);
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h3.section-title {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--green);
+      margin-bottom: 0.75rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem 1.6rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border-left: 4px solid var(--accent);
+    }
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 720px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 2.1rem;
+      }
+    }
+    .subtle {
+      color: #666;
+      font-size: 0.95rem;
+    }
+    .timeline {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+    .timeline li {
+      margin-bottom: 0.6rem;
+    }
+    .timeline strong {
+      color: var(--green);
+    }
+    .highlight {
+      background: rgba(201,166,107,0.08);
+      border-radius: 6px;
+      padding: 0.6rem 0.8rem;
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+    }
+    .rsvp-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.6rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .rsvp-button:hover {
+      background: #27432b;
+    }
+    .small-note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 0.6rem;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ken &amp; Clare</h1>
+    <h2>Join us in Glens Falls, New York</h2>
+    <p>We’re so excited to celebrate outdoors with our favorite people.</p>
+    <div class="date-badge">
+      September 26 &middot; 3:00 PM
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="#info">Travel &amp; Info</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- DETAILS -->
+    <section id="details">
+      <h3 class="section-title">The day</h3>
+      <div class="card two-column">
+        <div>
+          <p><strong>Date:</strong> Saturday, September 26</p>
+          <p><strong>Time:</strong> Ceremony &amp; cocktail hour beginning at 3:00 PM</p>
+          <p><strong>Location:</strong><br>
+            Morgan &amp; Co. Restaurant<br>
+            Glens Falls, New York
+          </p>
+          <p class="highlight">
+            The celebration will have an outdoorsy, relaxed feel—think cozy, natural, and comfortable.
+          </p>
+        </div>
+        <div>
+          <p class="subtle">
+            Weather in late September can be cool, especially in the evening. We recommend:
+          </p>
+          <ul class="subtle">
+            <li>Layers or a light jacket</li>
+            <li>Comfortable shoes suitable for outdoor spaces</li>
+            <li>Neutral or earth-tone colors if you’d like to match the vibe</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="schedule">
+      <h3 class="section-title">Schedule</h3>
+      <div class="card">
+        <ul class="timeline">
+          <li><strong>3:00 PM</strong> &mdash; Cocktail hour begins</li>
+          <li><strong>Ceremony</strong> &mdash; During the afternoon at Morgan &amp; Co (exact timing to be announced)</li>
+          <li><strong>5:00 PM</strong> &mdash; Dinner is served</li>
+          <li><strong>Evening</strong> &mdash; Drinks, dessert, and time together</li>
+        </ul>
+        <p class="highlight">
+          Please arrive a little before 3:00 PM so you have time to park, settle in, and enjoy the start of the day with us.
+        </p>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp">
+      <h3 class="section-title">RSVP</h3>
+      <div class="card">
+        <p>
+          We’d love to know if you can join us. Please RSVP by
+          <strong>August 26</strong>.
+        </p>
+        <p>
+          You can RSVP by email with your name, number of guests, and any dietary needs:
+        </p>
+        <a class="rsvp-button" href="mailto:your-rsvp-email@example.com?subject=Ken%20%26%20Clare%20Wedding%20RSVP">
+          RSVP via Email
+        </a>
+        <p class="small-note">
+          (Replace this email address in the code with your real RSVP email.)
+        </p>
+        <p class="small-note">
+          If you received a physical invitation with a QR code, scanning it should bring you right back to this page.
+        </p>
+      </div>
+    </section>
+
+    <!-- TRAVEL / EXTRA INFO -->
+    <section id="info">
+      <h3 class="section-title">Travel &amp; other details</h3>
+      <div class="card">
+        <p class="subtle">
+          For guests traveling to Glens Falls, there are several hotels and rentals nearby. Feel free to reach out if you’d like suggestions.
+        </p>
+        <p class="highlight">
+          Your presence is the only gift we ask for. If you’d still like to give something, your support, stories, and hugs mean the most to us.
+        </p>
+      </div>
+    </section>
+
+    <div class="footer">
+      With love, Ken &amp; Clare
+    </div>
+  </main>
+</body>
+</html>
