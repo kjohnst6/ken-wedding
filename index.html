@@ -178,9 +178,10 @@
   <header>
     <h1>Ken &amp; Clare</h1>
     <h2>Join us in Glens Falls, New York</h2>
-    <p>We’re so excited to celebrate with our favorite people</p>
-    <div class="date-badge">
-      September 26 &middot; 1:30 PM Ceremony
+    <p>We’re so excited to celebrate outdoors with our favorite people.</p>
+    <!-- This text will be set by JavaScript -->
+    <div id="date-badge" class="date-badge">
+      September 26 &middot; 3:30 PM Cocktail Hour
     </div>
   </header>
 
@@ -201,13 +202,13 @@
       <h3 class="section-title">Ceremony on Prospect Mountain</h3>
       <div class="card">
         <p>
-          We’re happy to have you join us for the ceremony at the
+          We’re honored to have you join us for the ceremony at the
           <strong>Prospect Mountain Summit Overlook Pavilion</strong>.
         </p>
         <p><strong>Ceremony Time:</strong> 1:30 PM</p>
         <p class="subtle">
-          Please arrive 15 minutes early to allow time for the drive up the mountain,
-          parking, and getting settled at the pavilion. We will pay for your addmission
+          Please arrive 15–20 minutes early to allow time for the drive up the mountain,
+          parking, and getting settled at the pavilion.
         </p>
         <p class="highlight">
           The summit can be breezy and cooler than town—layers and comfortable shoes are a good idea.
@@ -238,7 +239,7 @@
             Glens Falls, New York
           </p>
           <p class="highlight">
-            The venue building is a historic and classic 19th century home owned by Food Network Chef
+            The celebration will have an outdoorsy, relaxed feel—think cozy, natural, and comfortable.
           </p>
         </div>
         <div>
@@ -257,13 +258,22 @@
     <section id="schedule">
       <h3 class="section-title">Schedule</h3>
       <div class="card">
-        <ul class="timeline">
+        <!-- Two versions: one for ceremony guests, one for reception-only -->
+        <ul id="schedule-ceremony" class="timeline" style="display:none;">
           <li><strong>1:30 PM</strong> &mdash; Ceremony (Prospect Mountain)</li>
           <li><strong>3:30 PM</strong> &mdash; Cocktail hour begins (Morgan &amp; Co.)</li>
           <li><strong>5:00 PM</strong> &mdash; Dinner is served</li>
           <li><strong>6:00–10:00 PM</strong> &mdash; Dancing and party</li>
           <li><strong>10:00 PM – close</strong> &mdash; Drinks downtown for anyone who wants to keep the night going</li>
         </ul>
+
+        <ul id="schedule-reception" class="timeline">
+          <li><strong>3:30 PM</strong> &mdash; Cocktail hour begins (Morgan &amp; Co.)</li>
+          <li><strong>5:00 PM</strong> &mdash; Dinner is served</li>
+          <li><strong>6:00–10:00 PM</strong> &mdash; Dancing and party</li>
+          <li><strong>10:00 PM – close</strong> &mdash; Drinks downtown for anyone who wants to keep the night going</li>
+        </ul>
+
         <p class="highlight">
           Please arrive a little before 3:30 PM so you have time to park, settle in, and enjoy the start of the evening with us.
           Parking is available at Morgan &amp; Co., with additional street parking and a lot across Maple Street.
@@ -280,7 +290,7 @@
           <strong>August 26</strong>.
         </p>
         <p>
-          You can RSVP by QR code with your name:
+          You can RSVP by QR code with your name and number of guests:
         </p>
         <a class="rsvp-button" href="mailto:your-rsvp-email@example.com?subject=Ken%20%26%20Clare%20Wedding%20RSVP">
           RSVP via Email
@@ -330,10 +340,31 @@
   </main>
 
   <script>
-    // Show ceremony section only if URL ends with #ceremony
-    if (window.location.hash === "#ceremony") {
-      const section = document.getElementById("ceremony-details");
-      if (section) section.style.display = "block";
+    const isCeremony = window.location.hash === "#ceremony";
+
+    // Header badge text
+    const badge = document.getElementById("date-badge");
+    if (isCeremony) {
+      badge.textContent = "September 26 · 1:30 PM Ceremony";
+    } else {
+      badge.textContent = "September 26 · 3:30 PM Cocktail Hour";
+    }
+
+    // Show/hide ceremony section
+    const ceremonySection = document.getElementById("ceremony-details");
+    if (isCeremony && ceremonySection) {
+      ceremonySection.style.display = "block";
+    }
+
+    // Switch schedule lists
+    const schedCeremony = document.getElementById("schedule-ceremony");
+    const schedReception = document.getElementById("schedule-reception");
+    if (isCeremony) {
+      if (schedCeremony) schedCeremony.style.display = "block";
+      if (schedReception) schedReception.style.display = "none";
+    } else {
+      if (schedCeremony) schedCeremony.style.display = "none";
+      if (schedReception) schedReception.style.display = "block";
     }
   </script>
 </body>
