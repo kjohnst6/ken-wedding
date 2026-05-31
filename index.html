@@ -24,7 +24,7 @@
     }
     header {
       background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                  url("https://4.bp.blogspot.com/-Od_GXC3Wu1A/UNizifdY-7I/AAAAAAAACds/6bokikEaPJ0/s1600/adiron+heart+lake.jpg") center/cover no-repeat;
+                  url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg") center/cover no-repeat;
       color: #fff;
       text-align: center;
       padding: 6rem 1.5rem 5rem;
@@ -165,6 +165,13 @@
       color: #777;
       margin-top: 1rem;
     }
+    .map-embed {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 0.75rem;
+    }
   </style>
 </head>
 <body>
@@ -188,14 +195,42 @@
   </nav>
 
   <main>
+    <!-- CEREMONY (HIDDEN UNLESS #ceremony) -->
+    <section id="ceremony-details" style="display:none;">
+      <h3 class="section-title">Ceremony on Prospect Mountain</h3>
+      <div class="card">
+        <p>
+          We’re honored to have you join us for the ceremony at the
+          <strong>Prospect Mountain Summit Overlook Pavilion</strong>.
+        </p>
+        <p><strong>Ceremony Time:</strong> 3:00 PM</p>
+        <p class="subtle">
+          Please plan to arrive 15–20 minutes early to allow time for the drive up the mountain,
+          parking, and getting settled at the pavilion.
+        </p>
+        <p class="highlight">
+          The summit can be breezy and cooler than town—layers and comfortable shoes are a good idea.
+        </p>
+        <iframe
+          class="map-embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Prospect+Mountain+Summit+Overlook+Pavilion&output=embed">
+        </iframe>
+        <p class="small-note">
+          After the ceremony, we’ll all head down to Glens Falls for cocktail hour and the reception at Morgan &amp; Co.
+        </p>
+      </div>
+    </section>
+
     <!-- DETAILS -->
     <section id="details">
       <h3 class="section-title">The day</h3>
       <div class="card two-column">
         <div>
           <p><strong>Date:</strong> Saturday, September 26</p>
-          <p><strong>Time:</strong> Ceremony &amp; cocktail hour beginning at 3:30 PM</p>
-          <p><strong>Location:</strong><br>
+          <p><strong>Time:</strong> Reception beginning with cocktail hour at 3:30 PM</p>
+          <p><strong>Reception Location:</strong><br>
             Morgan &amp; Co. Restaurant<br>
             Glens Falls, New York
           </p>
@@ -222,10 +257,12 @@
         <ul class="timeline">
           <li><strong>3:30 PM</strong> &mdash; Cocktail hour begins</li>
           <li><strong>5:00 PM</strong> &mdash; Dinner is served</li>
-          <li><strong>Evening</strong> &mdash; Drinks, dessert, and time together</li>
+          <li><strong>6:00–10:00 PM</strong> &mdash; Dancing and party</li>
+          <li><strong>10:00 PM – close</strong> &mdash; Drinks downtown for anyone who wants to keep the night going</li>
         </ul>
         <p class="highlight">
-          Please arrive a little before 3:30 PM so you have time to park, settle in, and enjoy the start of the day with us. Parking is available at the Morgan and plenty of street parking. Additionally, there's a parking lot across Maple St from the Restaurant. 
+          Please arrive a little before 3:30 PM so you have time to park, settle in, and enjoy the start of the evening with us.
+          Parking is available at Morgan &amp; Co., with additional street parking and a lot across Maple Street.
         </p>
       </div>
     </section>
@@ -239,7 +276,7 @@
           <strong>August 26</strong>.
         </p>
         <p>
-          You can RSVP by QR code with your name, number of guests:
+          You can RSVP by QR code with your name and number of guests:
         </p>
         <a class="rsvp-button" href="mailto:your-rsvp-email@example.com?subject=Ken%20%26%20Clare%20Wedding%20RSVP">
           RSVP via Email
@@ -258,11 +295,20 @@
       <h3 class="section-title">Travel &amp; other details</h3>
       <div class="card">
         <p class="subtle">
-          For guests traveling to Glens Falls, there are several hotels and rentals nearby. The Queensbury hotel is across the street. Feel free to reach out if you’d like suggestions.
+          For guests traveling to Glens Falls, there are several hotels and rentals nearby.
+          The Queensbury Hotel is across the street from Morgan &amp; Co. Feel free to reach out if you’d like suggestions.
         </p>
         <p class="highlight">
-          Your presence is the only gift we ask for. If you’d still like to give something, your support, stories, and hugs mean the most to us.
+          Your presence is the only gift we ask for. If you’d still like to give something,
+          your support, stories, and hugs mean the most to us.
         </p>
+        <h4 class="subtle" style="margin-top:1rem;">Reception location map</h4>
+        <iframe
+          class="map-embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Morgan+%26+Co+Restaurant+Glens+Falls+NY&output=embed">
+        </iframe>
       </div>
     </section>
 
@@ -280,5 +326,13 @@
       With love, Ken &amp; Clare
     </div>
   </main>
+
+  <script>
+    // Show ceremony section only if URL ends with #ceremony
+    if (window.location.hash === "#ceremony") {
+      const section = document.getElementById("ceremony-details");
+      if (section) section.style.display = "block";
+    }
+  </script>
 </body>
 </html>
