@@ -1,353 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ken & Clare - Wedding</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --green: #2f4f4f;
-      --light: #faf7f2;
-      --accent: #b88a44;
-      --dark: #2b2b2b;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<title>Ken & Clare Wedding</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
     body {
-      font-family: "Georgia", "Times New Roman", serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
+        font-family: Georgia, serif;
+        margin: 0;
+        background: #f7f4ef;
+        color: #333;
     }
     header {
-      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                  url("https://4.bp.blogspot.com/-Od_GXC3Wu1A/UNizifdY-7I/AAAAAAAACds/6bokikEaPJ0/s1600/adiron+heart+lake.jpg") center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 6rem 1.5rem 5rem;
+        background: #2e3d2f;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
     }
     header h1 {
-      font-size: 2.8rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+        margin: 0;
+        font-size: 42px;
+        letter-spacing: 2px;
     }
     header h2 {
-      margin-top: 0.75rem;
-      font-size: 1.4rem;
-      font-weight: normal;
-      letter-spacing: 0.12em;
+        margin: 10px 0 0;
+        font-size: 22px;
+        font-weight: normal;
     }
-    header p {
-      margin-top: 1.5rem;
-      font-size: 1rem;
+    .section {
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: auto;
     }
-    .date-badge {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.6rem 1.4rem;
-      border: 1px solid #fff;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+    .section h3 {
+        font-size: 26px;
+        margin-bottom: 10px;
+        color: #2e3d2f;
     }
-    nav {
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    nav li {
-      margin: 0.4rem 0.8rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--dark);
-      font-size: 0.9rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.4rem 0.2rem;
-      border-bottom: 2px solid transparent;
-    }
-    nav a:hover {
-      border-color: var(--accent);
-    }
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 3.5rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h3.section-title {
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--green);
-      margin-bottom: 0.75rem;
-    }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1.5rem 1.6rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      border-left: 4px solid var(--accent);
-    }
-    .two-column {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 1.5rem;
-    }
-    @media (max-width: 720px) {
-      .two-column {
-        grid-template-columns: 1fr;
-      }
-      header h1 {
-        font-size: 2.1rem;
-      }
-    }
-    .subtle {
-      color: #666;
-      font-size: 0.95rem;
-    }
-    .timeline {
-      list-style: none;
-      margin-top: 0.5rem;
-    }
-    .timeline li {
-      margin-bottom: 0.6rem;
-    }
-    .timeline strong {
-      color: var(--green);
-    }
-    .highlight {
-      background: rgba(201,166,107,0.08);
-      border-radius: 6px;
-      padding: 0.6rem 0.8rem;
-      margin-top: 0.8rem;
-      font-size: 0.95rem;
+    .section p {
+        font-size: 18px;
+        line-height: 1.6;
     }
     .rsvp-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.6rem;
-      border-radius: 999px;
-      border: none;
-      background: var(--green);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.95rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+        display: inline-block;
+        padding: 14px 26px;
+        background: #2e3d2f;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 6px;
+        margin-top: 20px;
     }
-    .rsvp-button:hover {
-      background: #27432b;
+    .schedule-item {
+        margin: 8px 0;
+        font-size: 18px;
     }
-    .small-note {
-      font-size: 0.85rem;
-      color: #777;
-      margin-top: 0.6rem;
+    footer {
+        text-align: center;
+        padding: 30px;
+        background: #2e3d2f;
+        color: white;
+        margin-top: 40px;
     }
-    .footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #777;
-      margin-top: 1rem;
-    }
-    .map-embed {
-      width: 100%;
-      height: 250px;
-      border: 0;
-      border-radius: 8px;
-      margin-top: 0.75rem;
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Ken &amp; Clare</h1>
-    <h2>Join us in Glens Falls, New York</h2>
-    <p>We’re excited to celebrate with our favorite people!</p>
-    <!-- This text will be set by JavaScript -->
-    <div id="date-badge" class="date-badge">
-      September 26 &middot; 3:30 PM Cocktail Hour
-    </div>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#schedule">Schedule</a></li>
-      <li><a href="#rsvp">RSVP</a></li>
-      <li><a href="#info">Travel &amp; Info</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<header id="header">
+    <h1>Ken & Clare</h1>
+    <h2 id="header-time"></h2>
+</header>
 
-  <main>
+<div class="section" id="welcome">
+    <h3>Welcome</h3>
+    <p>We are so excited to celebrate with you in Glens Falls, NY.</p>
+</div>
 
-    <!-- CEREMONY SECTION (HIDDEN UNLESS #ceremony) -->
-    <section id="ceremony-details" style="display:none;">
-      <h3 class="section-title">Ceremony on Prospect Mountain</h3>
-      <div class="card">
-        <p>
-          Join us for the ceremony at the
-          <strong>Prospect Mountain Summit Overlook Pavilion</strong>.
-        </p>
-        </p>
-        <p><strong>Ceremony Time:</strong> 2:00 PM</p>
-        </p>
-        <p class="subtle">
-          Please arrive 15–20 minutes early to allow time for the drive up the mountain,
-          parking, and getting settled at the pavilion. Please tell the attendant you are here for the Johnston-Girard Wedding.
-        </p>
-        <p class="highlight">
-          
+<div class="section" id="details">
+    <h3>Ceremony & Reception Details</h3>
+    <p id="details-text"></p>
+</div>
 
-        <iframe
-          class="map-embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Prospect+Mountain+Summit+Overlook+Pavilion&output=embed">
-        </iframe>
+<div class="section" id="schedule">
+    <h3>Schedule</h3>
+    <div id="schedule-items"></div>
+</div>
 
-        <p class="small-note">
-          After the ceremony, we’ll all head down to Glens Falls for cocktail hour and the reception at Morgan &amp; Co.
-        </p>
-      </div>
-    </section>
+<div class="section" id="travel">
+    <h3>Travel & Parking</h3>
+    <p><strong>Parking:</strong> Guests may park in the Morgan & Co. lot behind the restaurant. Additional street parking is available nearby. Please allow extra time during busy downtown hours.</p>
+</div>
 
-    <!-- DETAILS -->
-    <section id="details">
-      <h3 class="section-title">The day</h3>
-      <div class="card two-column">
-        <div>
-          <p><strong>Date:</strong> Saturday, September 26</p>
-          <p><strong>Time:</strong> Reception beginning with cocktail hour at 3:30 PM</p>
-          <p><strong>Reception Location:</strong><br>
-            Morgan &amp; Co. Restaurant<br>
-            Glens Falls, New York
-          </p>
-          <p class="highlight">
-  
-       
+<div class="section" id="stay">
+    <h3>Where to Stay</h3>
+    <p>Queensbury Hotel</p>
+    <p>Glens Falls Inn</p>
+    <p>Fairfield by Marriott</p>
+    <p>Red Roof Inn</p>
+    <p>Holiday Inn</p>
+</div>
 
-    <!-- SCHEDULE -->
-    <section id="schedule">
-      <h3 class="section-title">Schedule</h3>
-      <div class="card">
-        <!-- Two versions: one for ceremony guests, one for reception-only -->
-        <ul id="schedule-ceremony" class="timeline" style="display:none;">
-          <li><strong>2:00 PM</strong> &mdash; Ceremony (Prospect Mountain)</li>
-          <li><strong>3:30 PM</strong> &mdash; Cocktail hour begins (Morgan &amp; Co.)</li>
-          <li><strong>5:00 PM</strong> &mdash; Dinner is served</li>
-          <li><strong>6:00–10:00 PM</strong> &mdash; Dancing and party</li>
-       
+<div class="section" id="rsvp">
+    <h3>RSVP</h3>
+    <a class="rsvp-button" href="https://docs.google.com/forms/d/e/1FAIpQLSccvk3M5K_kIqmTd4GXaQJZeYN_l5bAqpvA-GLfZcCGRzTXZw/viewform?usp=header" target="_blank">
+        RSVP Here
+    </a>
+</div>
 
-        <ul id="schedule-reception" class="timeline">
-          <li><strong>3:30 PM</strong> &mdash; Cocktail hour begins (Morgan &amp; Co.)</li>
-          <li><strong>5:00 PM</strong> &mdash; Dinner is served</li>
-          <li><strong>6:00–10:00 PM</strong> &mdash; Dancing and party</li>
-          
+<footer>
+    Ken & Clare — September 26, 2026 — Glens Falls, NY
+</footer>
 
-
-    <!-- RSVP -->
-    <section id="rsvp">
-      <h3 class="section-title">RSVP</h3>
-      <div class="card">
-        <p>
-          We’d love to know if you can join us. Please RSVP by
-          <strong>August 26</strong>.
-        </p>
-        <p>
-          You can RSVP by QR code with your name and number of guests:
-        </p>
-        <a class="rsvp-button" href="mailto:your-rsvp-email@example.com?subject=Ken%20%26%20Clare%20Wedding%20RSVP">
-          RSVP via Email
-        </a>
-        <p class="small-note">
-          (Replace this email address in the code with your real RSVP email.)
-        </p>
-      </div>
-    </section>
-
-    <!-- TRAVEL / EXTRA INFO -->
-    <section id="info">
-      <h3 class="section-title">Travel &amp; other details</h3>
-      <div class="card">
-        <p class="subtle">
-          For guests traveling to Glens Falls, there are several hotels and rentals nearby.
-          The Queensbury Hotel is across the street from Morgan &amp; Co. Feel free to reach out if you’d like suggestions.
-        </p>
-         <p class="highlight">
-          Parking is available at Morgan &amp; Co., with additional street parking and a lot across Maple Street.
-        </p>
-      </div>
-    </section>
-
-        <h4 class="subtle" style="margin-top:1rem;">Reception location map</h4>
-        <iframe
-          class="map-embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Morgan+%26+Co+Restaurant+Glens+Falls+NY&output=embed">
-        </iframe>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h3 class="section-title">Contact</h3>
-      <div class="card">
-        <p>If you have any questions about the day, feel free to reach out to Ken directly.</p>
-        <p><strong>Phone:</strong> <a href="tel:5185862607">518-586-2607</a></p>
-        <p class="subtle">Call or text anytime — happy to help.</p>
-      </div>
-    </section>
-
-    <div class="footer">
-      With love, Ken &amp; Clare
-    </div>
-  </main>
-
-  <script>
+<script>
     const isCeremony = window.location.hash === "#ceremony";
 
-    // Header badge text
-    const badge = document.getElementById("date-badge");
-    if (isCeremony) {
-      badge.textContent = "September 26 · 2:00 PM Ceremony";
-    } else {
-      badge.textContent = "September 26 · 3:30 PM Cocktail Hour";
-    }
+    const headerTime = document.getElementById("header-time");
+    const detailsText = document.getElementById("details-text");
+    const scheduleItems = document.getElementById("schedule-items");
 
-    // Show/hide ceremony section
-    const ceremonySection = document.getElementById("ceremony-details");
-    if (isCeremony && ceremonySection) {
-      ceremonySection.style.display = "block";
-    }
-
-    // Switch schedule lists
-    const schedCeremony = document.getElementById("schedule-ceremony");
-    const schedReception = document.getElementById("schedule-reception");
     if (isCeremony) {
-      if (schedCeremony) schedCeremony.style.display = "block";
-      if (schedReception) schedReception.style.display = "none";
+        headerTime.textContent = "Ceremony at 2:00 PM";
+        detailsText.textContent = "Join us for our ceremony at 2:00 PM, followed by the reception at Morgan & Co.";
+
+        scheduleItems.innerHTML = `
+            <div class="schedule-item"><strong>2:00 PM</strong> — Ceremony</div>
+            <div class="schedule-item"><strong>3:30 PM</strong> — Cocktail Hour</div>
+            <div class="schedule-item"><strong>4:30 PM</strong> — Dinner & Reception</div>
+        `;
     } else {
-      if (schedCeremony) schedCeremony.style.display = "none";
-      if (schedReception) schedReception.style.display = "block";
+        headerTime.textContent = "Cocktail Hour at 3:30 PM";
+        detailsText.textContent = "Join us at Morgan & Co. for cocktail hour at 3:30 PM, followed by dinner and reception.";
+
+        scheduleItems.innerHTML = `
+            <div class="schedule-item"><strong>3:30 PM</strong> — Cocktail Hour</div>
+            <div class="schedule-item"><strong>4:30 PM</strong> — Dinner & Reception</div>
+        `;
     }
-  </script>
+</script>
+
 </body>
 </html>
