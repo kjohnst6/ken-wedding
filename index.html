@@ -178,7 +178,7 @@
   <header>
     <h1>Ken &amp; Clare</h1>
     <h2>Join us in Glens Falls, New York</h2>
-    <p>We’re excited to celebrate with our favorite people!</p>
+    <p>We’re excited to celebrate with you!</p>
     <div id="date-badge" class="date-badge">
       September 26 · 3:30 PM Cocktail Hour
     </div>
@@ -226,7 +226,7 @@
 
     <!-- DETAILS -->
     <section id="details">
-      <h3 class="section-title">The day</h3>
+      <h3 class="section-title">Information</h3>
       <div class="card two-column">
         <div>
           <p><strong>Date:</strong> Saturday, September 26</p>
@@ -236,6 +236,8 @@
             Glens Falls, New York
           </p>
         </div>
+        <p id="ceremony-info" style="display:none;"><strong>Ceremony:</strong> Prospect Mountain Pavilion</p>
+
       </div>
     </section>
 
@@ -327,6 +329,10 @@
     if (isCeremony && ceremonySection) {
       ceremonySection.style.display = "block";
     }
+    if (isCeremony) {
+  document.getElementById("ceremony-info").style.display = "block";
+}
+
 
     const schedCeremony = document.getElementById("schedule-ceremony");
     const schedReception = document.getElementById("schedule-reception");
